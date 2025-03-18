@@ -3,7 +3,12 @@
     <head>
         <title>Modelo Digital de Terreno</title>
         <meta charset="utf-8">
+        <meta name="Página dedicada a la generacion de grillas de puntos, en base a una nuve de puntos dada, subiendo un archivo en formato DXF, XLS, kml, CSV.
+         La grilla se genera por Interpolacion usando alguno de los siguientes metodos: Vecino mas cercano, Bilinial, Bicubica, Kriging, Thiessen, Splines, Inversa de la distancia, IDW, RBFs.
+         Realiza curvas de nivel, en base a la grilla de puntos usando alguno de los siguientes metodos: Interpolación de Contornos, Marching Squares, Triangulos de Delanuay.
+         Genera un Modelo Digital de Terreno (MDT) (EDM)">
         <link rel="stylesheet" href="labo.css">
+
         <script>
             // Variable global que indica si WebGL2 es soportado
             let isWebGL2;
@@ -23,7 +28,7 @@
     <body>
         <header class="encabezado"> 
             <div class="encabezado" style="flex-direction: row">  
-                <label>Modelo Digital de Terreno</label>
+                <h1>Modelo Digital de Terreno</h1>
             </div>
             <div class="encabezado" style="flex-direction: row">
                 <label id="nomArchivo" style="margin-left: 10px; font-size: 12px;"></label>
