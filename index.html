@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title>Modelo Digital de Terreno</title>
-        <meta charset="utf-8">
-        <meta name="Página dedicada a la generacion de grillas de puntos, en base a una nuve de puntos dada, subiendo un archivo en formato DXF, XLS, kml, CSV.
-         La grilla se genera por Interpolacion usando alguno de los siguientes metodos: Vecino mas cercano, Bilinial, Bicubica, Kriging, Thiessen, Splines, Inversa de la distancia, IDW, RBFs.
-         Realiza curvas de nivel, en base a la grilla de puntos usando alguno de los siguientes metodos: Interpolación de Contornos, Marching Squares, Triangulos de Delanuay.
-         Genera un Modelo Digital de Terreno (MDT) (EDM)">
-        <meta name="google-site-verification" content="Mx0gBLVGtYM4N7rIcOdfGUfevTtx4Ffn90DamG3WsMU" />
-        <link rel="stylesheet" href="labo.css">
+   <title>Modelo Digital del Terreno Online | Generador de Curvas de Nivel y Volúmenes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Herramienta gratuita para crear Modelos Digitales del Terreno (MDT). Realiza interpolación (Kriging, IDW, RBF), genera curvas de nivel, triangulación de Delaunay y cálculo de volúmenes a partir de archivos CSV, Excel o DXF.">
+    <meta name="keywords" content="MDT, topografía, curvas de nivel, Kriging, IDW, triangulación Delaunay, cálculo de volumen, geomática, ingeniería civil">
+    <meta name="author" content="GacTopo">
+    
+    <meta property="og:title" content="Modelo Digital del Terreno Interactivo">
+    <meta property="og:description" content="Procesa nubes de puntos, genera grillas e interpolaciones y visualiza modelos 3D del terreno directamente en tu navegador.">
+    <meta property="og:url" content="https://gactopo1.github.io/mdt/">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="./css/mdt.css">
+    <link rel="canonical" href="https://gactopo1.github.io/mdt/" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
         <script>
             // Variable global que indica si WebGL2 es soportado
@@ -16,20 +24,21 @@
             let canvas = document.createElement('canvas');
             isWebGL2 = !!(window.WebGL2RenderingContext && canvas.getContext('webgl2'));
             console.log('WebGL2 soportado:', isWebGL2);
-            </script>
-                    <script type="importmap">
-                {
-                    "imports": {
-                            "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
-                            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
-                    }
+        </script>
+        <script type="importmap">
+            {
+                "imports": {
+                        "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+                        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
                 }
-            </script>
+            }
+        </script>
     </head>
+    
     <body>
-        <header class="encabezado"> 
+        <section class="encabezado"> 
             <div class="encabezado" style="flex-direction: row">  
-                <h1>Modelo Digital de Terreno</h1>
+                <h1>Modelo digital de terreno</h1>
             </div>
             <div class="encabezado" style="flex-direction: row">
                 <label id="nomArchivo" style="margin-left: 10px; font-size: 12px;"></label>
@@ -37,7 +46,7 @@
                 <label id="nombreCurva" style="margin-left: 10px; font-size: 12px;"></label>
                 <label id="mensaje" style="margin-left: 10px; font-size: 12px;"></label>
             </div>
-        </header>    
+        </section>    
         <section id="pantalla" class="contenedor" style="background-color: rgb(185, 221, 241);">
             <div class="grilla" style="width: 320px;">
                 <div class="xy">
@@ -470,9 +479,9 @@
             </section>
         </section>
     </body>
-    <script src='funciones.js'></script>
-    <script src="kriging.js"></script>
-    <script src="labo.js"></script>
+    <script src='./js/funcionesMdt.js'></script>
+    <script src="./js/kriging.js"></script>
+    <script src="./js/mdt.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dxf-parser@1.1.2/dist/dxf-parser.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/d3-delaunay@6"></script>
