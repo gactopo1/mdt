@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+
 Sitemap: https://gactopo1.github.io/mdt/sitemap.xml

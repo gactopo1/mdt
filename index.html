@@ -9,7 +9,7 @@
         <meta name="author" content="GacTopo">
         
         <meta property="og:title" content="Modelo Digital del Terreno Interactivo">
-        <meta property="og:description" content="Página dedicada a la generacion de grillas de puntos, en base a una nuve de puntos dada, subiendo un archivo en formato DXF, XLS, kml, CSV.
+        <meta property="og:description" content="Página dedicada a la generacion de grillas de puntos, en base a una nube de puntos dada, subiendo un archivo en formato DXF, XLS, kml, CSV.
          La grilla se genera por Interpolacion usando alguno de los siguientes metodos: Vecino mas cercano, Bilinial, Bicubica, Kriging, Thiessen, Splines, Inversa de la distancia, IDW, RBFs.
          Realiza curvas de nivel, en base a la grilla de puntos usando alguno de los siguientes metodos: Interpolación de Contornos, Marching Squares, Triangulos de Delanuay.
          Genera un Modelo Digital de Terreno (MDT) (EDM)">
@@ -38,6 +38,24 @@
                     }
                 }
             </script>
+        <!-- Datos estructurados para Google (Schema.org) -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Modelo Digital del Terreno Online",
+          "url": "https://gactopo1.github.io/mdt/",
+          "description": "Herramienta gratuita para crear Modelos Digitales del Terreno (MDT), generar curvas de nivel y calcular volúmenes.",
+          "applicationCategory": "DesignApplication",
+          "operatingSystem": "Any",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "featureList": "Interpolación Kriging, IDW, RBF, Triangulación Delaunay, Exportación DXF"
+        }
+        </script>
     </head>
     <body>
         <header class="encabezado"> 
@@ -481,6 +499,26 @@
                 <table id='torigen' style="margin-left: 20px;">
                 </table>
             </section>
+        </section>
+
+        <!-- Sección de contenido SEO: Texto descriptivo para mejorar el ranking en buscadores -->
+        <section id="info-seo" class="contenedor" style="flex-direction: column; padding: 20px; max-width: 1200px; margin: 20px auto; background-color: #f9f9f9; border-radius: 8px;">
+            <h2 style="text-align: center; color: #333;">Generador de Curvas de Nivel y Modelos Digitales del Terreno (MDT)</h2>
+            <p style="margin-bottom: 15px; line-height: 1.6;">
+                Bienvenido a la herramienta definitiva para el procesamiento topográfico online. Esta aplicación web permite transformar nubes de puntos en <strong>Modelos Digitales del Terreno (MDT)</strong> precisos, sin necesidad de instalar software costoso. Es ideal para ingeniería civil, topografía, arquitectura y geomática.
+            </p>
+            
+            <h3 style="color: #555;">Características Principales</h3>
+            <ul style="line-height: 1.6; margin-bottom: 15px;">
+                <li><strong>Formatos Compatibles:</strong> Importa tus datos topográficos fácilmente desde archivos <em>Excel (.xls, .xlsx), CSV y DXF</em>.</li>
+                <li><strong>Métodos de Interpolación Avanzados:</strong> Genera mallas regulares utilizando algoritmos matemáticos robustos como <strong>Kriging</strong>, <strong>Inversa de la Distancia Ponderada (IDW)</strong>, Splines Bicuadráticos/Bicúbicos, Triangulación de Delaunay y Funciones de Base Radial (RBF) como Gaussiana o Multicuadrática.</li>
+                <li><strong>Generación de Curvas de Nivel:</strong> Crea isolíneas automáticas con algoritmos como <em>Marching Squares</em> e interpolación de contornos, exportables directamente a formato <strong>DXF</strong> para AutoCAD.</li>
+                <li><strong>Cálculo de Volúmenes:</strong> Realiza cubicaciones precisas de desmonte y terraplén estableciendo planos de referencia personalizados.</li>
+                <li><strong>Visualización 3D:</strong> Inspecciona tu terreno en un visor 3D interactivo con opciones de malla de alambre, iluminación y texturas.</li>
+            </ul>
+            <p style="font-size: 0.9em; color: #666;">
+                Esta herramienta es totalmente gratuita y se ejecuta en tu navegador, garantizando la privacidad de tus datos topográficos.
+            </p>
         </section>
     </body>
     <script src='funciones.js'></script>
