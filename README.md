@@ -92,7 +92,7 @@ Al ser una aplicación estática (Client-side), no requiere un backend complejo.
 
 ## ✒️ Autor
 
-*   **GacTopo** - *Desarrollo Inicial*
+*   **Gerardo Adolfo Cuello** - *Desarrollo Inicial*
 
 ---
 *Este proyecto es una herramienta de uso libre para fines educativos y profesionales.*
