@@ -2,7 +2,7 @@
 
 Herramienta web interactiva para el procesamiento de nubes de puntos, generación de mallas, curvas de nivel y cálculo de volúmenes directamente desde el navegador.
 
-🔗 **[Ver Demo Online](https://gactopo1.github.io/mdt/)**
+🔗 **[Ver App Online](https://gactopo1.github.io/mdt/)**
 
 ## 📋 Descripción
 
